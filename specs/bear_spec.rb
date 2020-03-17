@@ -11,4 +11,20 @@ def setup()
 @bear = Bear.new("Yoghi", 'Grizzly')
 @new_fish = Fish.new("Sea bass")
 end
+
+def test_stomach_starts_empty()
+  assert_equal(0,@bear.stomach.size())
+end
+
+def test_add_fish_in_stomach()
+  @bear.add_fish()
+  assert_equal(1,@bear.stomach.size())
+end
+
+
+
+
+
+
+
 end
