@@ -8,5 +8,7 @@ class Bear
     @stomach = []
   end
 
-
+  def add_fish()
+  @stomach.push(@new_fish)
+  end
 end
