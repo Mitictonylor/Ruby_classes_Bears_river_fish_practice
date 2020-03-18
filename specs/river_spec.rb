@@ -34,14 +34,12 @@ end
   end
 
 def test_remove_fish()
-  @river.remove_fish()
-  assert_equal(1, @river.count_fishes())
+  nemo = @river.remove_fish()
+  # @river.remove_fish()
+  # assert_equal(1, @river.count_fishes())
+  assert_equal("Salmon",nemo.name)
 end
 
-def test_bear_eat_a_fish_from_river()
-@river.bear_eats_fish_from_river(@bear)
-assert_equal(1, @river.count_fishes())
-assert_equal(1, @bear.count_fishes_in_stomach())
-end
+
 
 end

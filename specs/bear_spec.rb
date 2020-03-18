@@ -9,8 +9,9 @@ require_relative("../river")
 class BearTest < MiniTest::Test
 
   def setup()
-  @bear = Bear.new("Yoghi", 'Grizzly')
-  @river = River.new("Amazon", @fishes )
+    @bear = Bear.new("Yoghi", 'Grizzly')
+    @fish = Fish.new("Sammy")
+    @river = River.new("Amazon", @fishes )
   end
 
   def test_bear_name()
@@ -31,7 +32,7 @@ class BearTest < MiniTest::Test
   end
 
   def test_eat()
-    @bear.eat(@river)
+    @bear.eat(@fish)
     assert_equal(1,@bear.stomach.size())
   end
 
@@ -39,8 +40,20 @@ class BearTest < MiniTest::Test
     assert_equal("Roar!!!", @bear.roar())
   end
 
+  # def test_bear_eat_a_fish_from_river()
+  # @river.bear_eats_fish_from_river(@bear)
+  # assert_equal(1, @river.count_fishes())
+  # assert_equal(1, @bear.count_fishes_in_stomach())
+  # end
 
+def test_bear_eat_a_fish_from_river()
+  @bear.take_fish(@river) # there must be something wrong with take_fish
+  # it's take fish that's not working... this all looks good.
+  # Show me code for take_fish !!!!!
+  assert_equal(1, @bear.count_fishes_in_stomach())
+end
 
+#i still don't get it
 
 
 

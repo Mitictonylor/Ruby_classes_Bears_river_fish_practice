@@ -20,7 +20,16 @@ class Bear
     return "Roar!!!"
   end
 
+  # def bear_eats_fish_from_river(bear)
+  #   remove_fish()
+  #   bear.eat(generate_random_fish())
+  #   bear.count_fishes_in_stomach()
+  #   count_fishes()
+  # end
 
-
+def take_fish(river)
+  fish = river.remove_fish() # show me this!!!
+  eat(fish)
+end
 
 end
