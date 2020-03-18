@@ -11,6 +11,8 @@ class BearTest < MiniTest::Test
   def setup()
     @bear = Bear.new("Yoghi", 'Grizzly')
     @fish = Fish.new("Sammy")
+    @fish2 = Fish.new("hay")
+  @fishes = [@fish, @fish2]
     @river = River.new("Amazon", @fishes )
   end
 

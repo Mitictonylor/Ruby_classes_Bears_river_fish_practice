@@ -5,7 +5,7 @@ Minitest::Reporters.use! Minitest::Reporters::SpecReporter.new
 require_relative("../fish")
 
 class TestFish < MiniTest::Test
-	def setup
+	def setup()
 		@fish = Fish.new("Sea bass")
 	end
 
